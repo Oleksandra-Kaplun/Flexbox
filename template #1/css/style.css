@@ -3,7 +3,6 @@ header {
 	color: ivory;
 	width: 100%;
 	max-width: 960px;
-	min-width: 460px;
 	min-height: 100px;
 	margin: 0 auto 40px;
 	display: flex;
@@ -14,7 +13,6 @@ header {
 .flex-wrap {
 	width: 100%;
 	max-width: 960px;
-	min-width: 460px;
 	margin: 0 auto 10px;
 	padding: 0 30px;
 	display: flex;
@@ -45,7 +43,6 @@ footer {
 	color: ivory;
 	width: 100%;
 	max-width: 960px;
-	min-width: 460px;
 	min-height: 50px;
 	margin: 0 auto 40px;
 	display: flex;
@@ -53,4 +50,19 @@ footer {
 		justify-content: center;
 	-webkit-align-items: center;
 		align-items: center;
+}
+
+@media (max-width: 768px) {
+	.flex-item {
+		flex: 1 1 calc(50% - 20px);
+	}
+}
+
+@media (max-width: 480px) {
+	.flex-wrap {
+		margin: 0;
+	}
+	.flex-item {
+		flex: 1 1 calc(100% - 20px);
+	}
 }
