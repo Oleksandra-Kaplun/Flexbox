@@ -36,9 +36,14 @@ h1 {
 	margin-top: 0;
 }
 
-h2 {
+h2 a {
 	margin-top: 0;
 	color: dimgray;
+	text-decoration: none;
+}
+
+h2 a:hover {
+	color: darkcyan;
 }
 
 p {
@@ -66,6 +71,7 @@ p {
 
 .logo {
 	background: darkslategray;
+	border-radius: 5px;
 	width: 200px;
 	height: 80px;
 	font-size: 24px;
@@ -88,10 +94,11 @@ p {
 
 .nav-item {
 	background: darkslategray;
+	border-radius: 5px;
 	width: 130px;
 	height: 50px;
 	font-size: 1.5em;
-	color: #fff;
+	color: lightcyan;
 	text-decoration: none;
 	text-align: center;
 	margin: 5px 0 0 15px;
@@ -101,6 +108,11 @@ p {
 	-webkit-align-items: center;
 		align-items: center;
 
+}
+
+.nav-item:hover {
+	box-shadow: 0 0 30px 5px darkcyan inset;
+	color: white;
 }
 
 .main {
@@ -118,15 +130,18 @@ p {
 
 .main-title {
 	background: darkslategray;
+	border-radius: 5px;
 	color: lightcyan;
 	text-transform: uppercase;
 	width: 70%;
 	min-height: 40px;
 	margin: 0 0 20px 30px;
+	padding-left: 20px;
 }
 
 .main-desc {
 	background: darkslategray;
+	border-radius: 5px;
 	width: 80%;
 	min-height: 200px;
 	margin: 0 0 30px 30px;
@@ -142,15 +157,20 @@ p {
 
 .desc-image {
 	border: 2px solid mediumturquoise;
-	width: 100%;
-	min-height: 100px;
+	height: 150px;
+	min-width: 200px;
 	margin: 20px;
+	-webkit-flex:  0 1 calc(30% - 20px / 2);
+ 			-ms-flex:  0 1 calc(30% - 20px / 2);
+ 				flex:  0 1 calc(30% - 20px / 2);
 }
 
 .desc-text p {
 	color: lightcyan;
-	width: 90%;
 	margin: 20px;
+	-webkit-flex:  0 1 calc(60% - 20px / 2);
+ 			-ms-flex:  0 1 calc(60% - 20px / 2);
+ 				flex:  0 1 calc(60% - 20px / 2);
 }
 
 .wrap {
@@ -178,6 +198,7 @@ p {
 	width: 200px;
 	height: 200px;
 	background: darkslategray;
+	border-radius: 5px;
 }
 
 .footer {
@@ -193,18 +214,65 @@ p {
 			box-sizing: border-box;
 }
 
- @media screen and (max-width: 800px) {
- 	.wrap-itm{
- 		-webkit-flex:  0 1 calc(50% - 30px / 2);
- 		    -ms-flex:  0 1 calc(50% - 30px / 2);
- 		        flex:  0 1 calc(50% - 30px / 2);
+ @media screen and (max-width: 900px) {
+ 	.wrap-itm {
+ 		-webkit-flex:  0 1 calc(33% - 20px / 2);
+ 			-ms-flex:  0 1 calc(33% - 20px / 2);
+ 				flex:  0 1 calc(33% - 20px / 2);
+ 	}
+ 	.desc-image {
+		-webkit-flex:  0 1 calc(50% - 20px / 2);
+ 			-ms-flex:  0 1 calc(50% - 20px / 2);
+ 				flex:  0 1 calc(50% - 20px / 2);
+	}
+	.desc-text p {
+		-webkit-flex:  0 1 calc(50% - 20px / 2);
+ 			-ms-flex:  0 1 calc(50% - 20px / 2);
+ 				flex:  0 1 calc(50% - 20px / 2);
+	}
+ }
+
+  @media screen and (max-width: 662px) {
+ 	.wrap-itm {
+ 		-webkit-flex:  0 1 calc(50% - 20px / 2);
+ 			-ms-flex:  0 1 calc(50% - 20px / 2);
+ 				flex:  0 1 calc(50% - 20px / 2);
+ 	}
+ 	.wrap {
+ 		margin: 0 0 30px 30px;
+ 	}
+	.main-desc {
+		flex-wrap: wrap;
+	}
+ 	.desc-image {
+		-webkit-flex:  0 1 calc(100% - 20px / 2);
+ 			-ms-flex:  0 1 calc(100% - 20px / 2);
+ 				flex:  0 1 calc(100% - 20px / 2);
+	}
+	.desc-text p {
+		-webkit-flex:  0 1 calc(100% - 20px / 2);
+ 			-ms-flex:  0 1 calc(100% - 20px / 2);
+ 				flex:  0 1 calc(100% - 20px / 2);
+	}
+ }
+
+ @media screen and (max-width: 480px) {
+	h2 {
+		margin: 5px 0;
+	}
+	p {
+		margin: 0;
+	}
+ 	.wrap-itm {
+ 		-webkit-flex:  0 1 100%;
+ 			-ms-flex:  0 1 100%;
+ 				flex:  0 1 100%;
+ 	}
+ 	.main-title {
+ 		font-size: 13px;
+ 	}
+ 	.nav {
+ 		font-size: 14px;
  	}
  }
 
- @media screen and (max-width: 600px) {
- 	.wrap-itm{
- 		-webkit-flex:  0 1 100%;
- 		    -ms-flex:  0 1 100%;
- 		        flex:  0 1 100%;
- 	}
- }
